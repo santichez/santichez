@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>TODO supply a title</title>
@@ -11,6 +6,19 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>hola santichez!</div>
+        <div id="lausan-qr-escaner-web">
+
+            <button v-on:click="grabar">COMENZAR
+            </button>
+            <video id="video" width="300"
+            height="200"
+            style="border: 1px solid gray">
+            </video>
+            URL ESCANEADA: {{ urlEscaneada }}
+        </div>
+        
+        <script src="vendor/vue/vue.min.js" type="text/javascript"></script>
+        <script src="https://unpkg.com/@zxing/library@latest" type="text/javascript"></script>
+        <script src="js/app.js" type="text/javascript"></script>
     </body>
 </html>
