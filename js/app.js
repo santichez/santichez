@@ -13,9 +13,9 @@ var app = new Vue({
             codeReader
                 .listVideoInputDevices()
                 .then(videoInputDevices => {
-                    cantidadDispositivos = videoInputDevices.length;
+                    dataComponente.cantidadDispositivos = videoInputDevices.length;
                     var idDispositivoSeleccionado = videoInputDevices.length > 1 ? videoInputDevices[1].deviceId : videoInputDevices[0].deviceId;
-                    idDispositivo = idDispositivoSeleccionado;
+                    dataComponente.idDispositivo = idDispositivoSeleccionado;
                     codeReader
                         .decodeOnceFromVideoDevice(idDispositivoSeleccionado, 'video')
                         .then(result => {
