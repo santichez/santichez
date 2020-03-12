@@ -44,9 +44,9 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div id="lausan-qr-escaner-web" class="row">
                 <div class="col s4 offset-s4">
-                    <div id="lausan-qr-escaner-web" class="lausan-escaner-container">
+                    <div class="lausan-escaner-container">
                         <a v-on:click="grabar" v-show="!camaraPrendida"
                             class="waves-effect waves-light btn-large lausan-color-bordo">
                             <i class="material-icons left lausan-icono-camara">camera_alt</i>
@@ -64,9 +64,11 @@
                                 </div>
                             </div>
                         </div>
-                        <video v-show="camaraPrendida" id="video" class="lausan-video">
-                        </video>
                     </div>
+                </div>
+                <div class="col s12 l8 offset-l2">
+                    <video v-show="camaraPrendida" id="video" class="lausan-video">
+                    </video>
                 </div>
             </div>
         </div>
